@@ -1,0 +1,8 @@
+{
+  "name": "github-repo-page-clone",
+  "version": "1.0.0",
+  "description": "Github's Repo Page Clone.",
+  "main": "index.js",
+  "author": "EstherSeyi",
+  "license": "MIT"
+}
