@@ -1,0 +1,111 @@
+/**
+==============
+LAYOUT
+==============
+*/
+.repos-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+.repos-list__star-btn {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.repo-details__language-timing {
+  display: flex;
+}
+.repo-details__language-circle {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+}
+
+/**
+==============
+COLORS
+==============
+*/
+.repos-list__star-btn {
+  background-color: var(--color-bg-accent);
+}
+.repo-details__title {
+  color: var(--color-blue);
+}
+
+.repo-details__access,
+.repo-details__description,
+.repo-details__language-text,
+.repo-details__timing {
+  color: var(--color-primary);
+}
+.repo-details__language-circle {
+  background-color: #2b7489;
+}
+
+/**
+==============
+SPACING
+==============
+*/
+.star-btn__icon {
+  margin-right: 0.5em;
+}
+.repos-list__item {
+  padding: 1.5em 0;
+}
+.repos-list__star-btn {
+  padding: 0.25em 0.8em;
+}
+.repo-details__access {
+  padding: 0 0.4375em;
+  margin-left: 0.5em;
+}
+.repo-details__language {
+  margin-right: 1em;
+}
+.repo-details__language-circle {
+  width: 12px;
+  height: 12px;
+}
+.repo-details__language-timing {
+  margin-top: 0.75em;
+}
+
+/**
+==============
+TYPOGRAPHY
+==============
+*/
+.repo-details__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.repo-details__access {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/**
+==============
+OTHERS
+==============
+*/
+.repos-list__star-btn,
+.repo-details__access,
+.repo-details__language-circle {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+.repo-details__access {
+  border-radius: 2em;
+}
+
+.repos-list__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.repo-details__language-circle {
+  border-radius: 50%;
+}

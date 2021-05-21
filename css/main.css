@@ -1,0 +1,202 @@
+@import url("./repos.css");
+
+/**
+==============
+LAYOUT
+==============
+*/
+/* information section */
+.information-section__names-photo {
+  display: flex;
+}
+.information-section__names {
+  align-self: center;
+}
+.information-section__photo {
+  z-index: 4;
+}
+
+/* Second Navigation and Repos */
+.second-nav__list {
+  display: flex;
+}
+.repos__new-btn,
+.repos__new-input {
+  display: block;
+}
+.repos__search-new {
+  display: flex;
+  flex-direction: column;
+}
+.second-nav__icon {
+  align-self: center;
+}
+
+.second-nav__link {
+  display: flex;
+}
+.repos__new-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.second-nav__item span {
+  display: none;
+}
+
+@media (min-width: 455px) {
+  .second-nav__item span {
+    display: inline;
+  }
+}
+
+/** ============== COLORS ============== */ /* information section */
+.names__username {
+  color: var(--color-primary);
+}
+.names__fullname {
+  color: var(--color-secondary);
+}
+/* Second Navigation and Repos */
+.repos__new-btn {
+  background-color: #2ea44e;
+  color: var(--color-bg-primary);
+}
+
+.second-nav__item {
+  color: var(--color-secondary);
+}
+.second-nav__link__repos-no {
+  background-color: rgba(209, 213, 218, 0.5);
+}
+
+/**
+==============
+SPACING
+==============
+*/
+/* information section */
+.information-section__names-photo {
+  margin-bottom: 1.5em;
+}
+.information-section__photo {
+  margin-right: 1em;
+  width: 16%;
+  height: 16%;
+}
+
+.names__fullname,
+.names__username {
+  margin: 0;
+}
+.information-section__bio {
+  padding: 0.25em;
+  margin-bottom: 0.75em;
+}
+
+/* Second Navigation and Repos */
+.second-nav__item {
+  padding: 0.5em 1em;
+}
+
+.second-nav {
+  padding: 0 1em;
+}
+.second-nav__list {
+  margin-bottom: 0;
+}
+.repos__search-new {
+  margin-top: 1em;
+  padding-bottom: 1.5em;
+}
+.repos__new-btn {
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+}
+.repos__new-input {
+  padding: 0.5em 0.25em;
+}
+.second-nav__link__repos-no {
+  padding: 0 0.375em;
+}
+.second-nav__link-text,
+.second-nav__icon {
+  margin-right: 0.5em;
+}
+.second-nav__icon {
+  height: 16px;
+  width: 16px;
+}
+
+/**
+==============
+TYPOGRAPHY
+==============
+*/
+/* information section */
+.names__fullname {
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-secondary);
+}
+
+.names__username {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.information-section__bio > p {
+  font-size: 0.75em;
+}
+.information-section__occupation {
+  font-size: 1rem;
+}
+
+/* Second Navigation and Repos */
+.nav-item__selected {
+  font-weight: 600;
+}
+.second-nav__link__repos-no,
+.second-nav__icon {
+  font-weight: 400;
+}
+
+/**
+==============
+OTHERS
+==============
+*/
+/* information section */
+.information-section__photo {
+  border-radius: 100%;
+}
+.information-section__bio {
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+}
+
+.information-section__bio > p::before {
+  content: "🏠 ";
+}
+
+/* Second Navigation and Repos */
+.second-nav,
+.repos__search-new {
+  border-bottom: 1px solid var(--color-border);
+}
+.repos__new-input {
+  border: 1px solid var(--color-border);
+}
+.repos__new-btn,
+.repos__new-input {
+  border-radius: 5px;
+}
+
+.nav-item__selected {
+  border-bottom: 2px solid #f9826c;
+}
+.second-nav__link__repos-no {
+  border-radius: 2em;
+}

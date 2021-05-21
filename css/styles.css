@@ -1,0 +1,77 @@
+:root {
+  --color-primary: #586069;
+  --color-secondary: #24292e;
+  --color-accent: #ffffff26;
+
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #24292e;
+  --color-bg-accent: #fafbfc;
+
+  --color-blue: #0366d6;
+  --color-border: #e1e4e8;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-accent: "Playfair Display", serif;
+
+  --fs-primary: 0.875rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: var(--fs-primary);
+  line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-secondary);
+  /* font-family: var(--ff-accent); */
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2,
+h3 {
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+button {
+  background: none;
+  border: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-area {
+  width: 95%;
+  max-width: 1280px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}

@@ -1,0 +1,162 @@
+/**
+==============
+LAYOUT
+==============
+*/
+.header-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.header-tab__nav {
+  display: none;
+}
+.nav__item-link,
+.header-tab__logo-search-nav {
+  display: flex;
+}
+
+.sign-out {
+  align-self: center;
+}
+.header {
+  position: relative;
+}
+
+.header__search {
+  position: absolute;
+  top: 45px;
+  right: 16px;
+  left: 1em;
+}
+
+@media (min-width: 768px) {
+  .hideable-nav,
+  .hamburger-button {
+    display: none;
+  }
+  .header-tab__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 42%;
+    max-width: 300px;
+  }
+
+  .header__search {
+    position: static;
+    align-self: center;
+  }
+  .header-tab__logo-search-nav {
+    flex: 40%;
+  }
+}
+
+/**
+==============
+COLORS
+==============
+*/
+.header {
+  background-color: var(--color-bg-secondary);
+}
+.nav__item,
+.header-tab__nav {
+  color: var(--color-bg-primary);
+}
+.header__search-input {
+  background-color: transparent;
+  color: var(--color-bg-primary);
+}
+.header__search-input::placeholder {
+  color: var(--color-bg-primary);
+  opacity: 0.7;
+}
+
+/**
+==============
+SPACING
+==============
+*/
+.header {
+  padding: 1em;
+  padding-bottom: 0.1em;
+}
+
+.hamburger,
+.logo {
+  width: 2em;
+  height: 2em;
+}
+.logo {
+  margin-right: 1em;
+}
+
+.notification-icon {
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.sign-out {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+}
+.header__search {
+  margin-top: 1em;
+}
+.header__search-input {
+  width: 100%;
+  padding: 0.5em 0;
+  padding-left: 0.5em;
+}
+.nav__item {
+  padding: 0.5em 0;
+}
+
+.nav {
+  margin-top: 5em;
+}
+
+@media (min-width: 768px) {
+  .nav,
+  .header__search {
+    margin-top: 0px;
+  }
+  .header {
+    padding-bottom: 1em;
+  }
+
+  .header__search {
+    width: 30%;
+    max-width: 300px;
+    margin-right: 1em;
+  }
+  .header-tab__nav {
+    width: 42%;
+    max-width: 300px;
+  }
+}
+
+/**
+==============
+TYPOGRAPHY
+==============
+*/
+.header__search-input::placeholder {
+  font-size: var(--fs-primary);
+}
+/**
+==============
+OTHERS
+==============
+*/
+
+.header__search-input {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--color-primary);
+}
+
+.nav__item {
+  border-top: 1px solid var(--color-accent);
+}
