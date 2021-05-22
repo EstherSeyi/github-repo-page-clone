@@ -30,12 +30,16 @@ LAYOUT
 }
 .information-section__photo {
   z-index: 4;
+  position: relative;
 }
 .second-nav {
   z-index: 3;
   position: sticky;
   top: 0px;
   background-color: var(--color-bg-primary);
+}
+.information-section__emoji-container {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -56,6 +60,12 @@ LAYOUT
   .information-section__photo {
     position: relative;
     bottom: 26px;
+  }
+  .information-section__emoji-container {
+    display: block;
+    position: absolute;
+    bottom: 48px;
+    right: 4px;
   }
 }
 
@@ -135,6 +145,10 @@ LAYOUT
   background-color: rgba(209, 213, 218, 0.5);
 }
 
+.information-section__emoji-container {
+  background-color: var(--color-bg-accent);
+}
+
 /**
 ==============
 SPACING
@@ -153,6 +167,10 @@ SPACING
   width: 16%;
   height: 16%;
 }
+.information-section__profile-photo {
+  width: 100%;
+  height: 100%;
+}
 
 .names__fullname,
 .names__username {
@@ -161,6 +179,10 @@ SPACING
 .information-section__bio {
   padding: 0.25em;
   margin-bottom: 0.75em;
+}
+
+.information-section__emoji-container {
+  padding: 0.175em 0.25em;
 }
 
 @media (min-width: 768px) {
@@ -257,7 +279,8 @@ OTHERS
 ==============
 */
 /* information section */
-.information-section__photo {
+.information-section__photo,
+.information-section__profile-photo {
   border-radius: 100%;
 }
 .information-section__bio {
@@ -267,6 +290,10 @@ OTHERS
 
 .information-section__bio > p::before {
   content: "🏠 ";
+}
+.information-section__emoji-container {
+  border: 1px solid var(--color-border);
+  border-radius: 100%;
 }
 
 /* Second Navigation and Repos */
