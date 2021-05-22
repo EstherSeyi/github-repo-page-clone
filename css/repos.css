@@ -14,6 +14,7 @@ LAYOUT
 }
 .repo-details__language-timing {
   display: flex;
+  flex-wrap: wrap;
 }
 .repo-details__language-circle {
   position: relative;

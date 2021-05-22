@@ -3,6 +3,13 @@
 LAYOUT
 ==============
 */
+.close-nav {
+  display: none;
+}
+.open-nav {
+  display: block;
+}
+
 .header-tabs {
   display: flex;
   justify-content: space-between;
@@ -38,8 +45,6 @@ LAYOUT
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 42%;
-    max-width: 300px;
   }
 
   .header__search {
@@ -132,8 +137,8 @@ SPACING
     margin-right: 1em;
   }
   .header-tab__nav {
-    width: 42%;
-    max-width: 300px;
+    width: 50%;
+    max-width: 400px;
   }
 }
 

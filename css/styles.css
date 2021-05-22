@@ -13,7 +13,7 @@
   --ff-primary: "Roboto", sans-serif;
   --ff-accent: "Playfair Display", serif;
 
-  --fs-primary: 0.875rem;
+  --fs-primary: 16px;
 }
 
 *,
@@ -69,7 +69,7 @@ ul {
   padding: 0;
 }
 
-.main-area {
+.container {
   width: 95%;
   max-width: 1280px;
   /* border: 1px solid red; */
