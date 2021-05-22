@@ -7,7 +7,6 @@ LAYOUT
 .hidden {
   display: none;
 }
-
 @media (min-width: 768px) {
   .main-area {
     display: flex;
@@ -89,7 +88,7 @@ LAYOUT
   display: none;
 }
 
-@media (min-width: 455px) {
+@media (min-width: 507px) {
   .second-nav__item span {
     display: inline;
   }
@@ -141,6 +140,10 @@ LAYOUT
 SPACING
 ==============
 */
+
+.main-area {
+  margin-top: 1em;
+}
 /* information section */
 .information-section__names-photo {
   margin-bottom: 1.5em;

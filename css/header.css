@@ -82,6 +82,11 @@ COLORS
 SPACING
 ==============
 */
+
+.header-tabs {
+  margin-bottom: 0.5em;
+}
+
 .header {
   padding: 1em;
   padding-bottom: 0.1em;
@@ -126,9 +131,6 @@ SPACING
   .nav,
   .header__search {
     margin-top: 0px;
-  }
-  .header {
-    padding-bottom: 1em;
   }
 
   .header__search {
