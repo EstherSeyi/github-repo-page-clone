@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HEADER SESSION -->
+    <header class="header">
+      <div class="header-tabs">
+        <button class="hamburger-button" id="toggle-nav-btn">
+          <img
+            class="hamburger header-icon"
+            src="./assets/hamburger.svg"
+            alt="hambuger menu icon"
+          />
+        </button>
+        <div class="header-tab__logo-search-nav">
+          <img
+            class="logo header-icon"
+            src="./assets/github-logo.svg"
+            alt="Github's Logo"
+          />
+          <form class="header__search close-nav" id="hideable-search">
+            <input
+              class="header__search-input"
+              placeholder="Search or jump to..."
+            />
+          </form>
+          <nav class="header-tab__nav">
+            <a>Pull requests</a>
+            <a>Issues</a>
+            <a>Marketplace</a>
+            <a>Explore</a>
+          </nav>
+        </div>
+        <img
+          class="notification-icon header-icon"
+          src="./assets/notification.svg"
+          alt="Notifications Icon"
+        />
+      </div>
+
+      <nav class="nav hideable-nav close-nav" id="hideable-nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__item-link">Dashboard</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Pull requests</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Issues</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Marketplace</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Explore</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Codespaces</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Sponsors</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Settings</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">EstherSeyi</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">
+              <img class="sign-out" src="assets/sign-out.svg" alt="sign out" />
+              Sign out</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- END OF HEADER SESSION-->
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
