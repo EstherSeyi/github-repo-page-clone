@@ -14,7 +14,7 @@
     <!-- HEADER SESSION -->
     <header class="header">
       <div class="header-tabs">
-        <button class="hamburger-button">
+        <button class="hamburger-button" id="toggle-nav-btn">
           <img
             class="hamburger header-icon"
             src="./assets/hamburger.svg"
@@ -27,7 +27,7 @@
             src="./assets/github-logo.svg"
             alt="Github's Logo"
           />
-          <form class="header__search">
+          <form class="header__search close-nav" id="hideable-search">
             <input
               class="header__search-input"
               placeholder="Search or jump to..."
@@ -47,7 +47,7 @@
         />
       </div>
 
-      <nav class="nav hideable-nav">
+      <nav class="nav hideable-nav close-nav" id="hideable-nav">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__item-link">Dashboard</a>
@@ -87,9 +87,60 @@
     </header>
     <!-- END OF HEADER SESSION-->
 
-    <main>
+    <nav class="second-nav hidden lg:block">
+      <div class="second-nav__inner container">
+        <div class="second-nav__empty"></div>
+
+        <ul class="second-nav__list">
+          <li class="second-nav__item">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/overview.svg"
+                alt="Overview"
+              />
+              <span>Overview</span>
+            </a>
+          </li>
+          <li class="second-nav__item nav-item__selected">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/repositories.svg"
+                alt="Repositories"
+              />
+              <span class="second-nav__link-text">Repositories</span>
+              <span class="second-nav__link__repos-no">29</span>
+            </a>
+          </li>
+          <li class="second-nav__item">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/projects.svg"
+                alt="Projects"
+              />
+              <span>Projects</span>
+            </a>
+          </li>
+
+          <li class="second-nav__item">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/packages.svg"
+                alt="Packages"
+              />
+              <span>Packages</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-area container">
       <!-- INFORMATION SESSION-->
-      <section class="information-section main-area">
+      <section class="information-section container">
         <div class="information-section__names-photo">
           <img class="information-section__photo" src="./assets/IMG_2598.jpg" />
           <div class="information-section__names">
@@ -105,7 +156,7 @@
       <!-- END OF INFORMATION SESSION-->
 
       <section class="second-nav-repos">
-        <nav class="second-nav">
+        <nav class="second-nav lg:hidden">
           <ul class="second-nav__list">
             <li class="second-nav__item">
               <a class="second-nav__link">
@@ -151,7 +202,7 @@
             </li>
           </ul>
         </nav>
-        <div class="repos__search-new main-area">
+        <div class="repos__search-new container">
           <button class="repos__new-btn">
             <img
               class="second-nav__icon icon__new-btn"
@@ -164,7 +215,7 @@
         </div>
 
         <!-- REPOSITORIES LIST SECTION-->
-        <section class="repos-list main-area">
+        <section class="repos-list container">
           <div class="repos-list__item">
             <div class="repos-list__item__details">
               <h3 class="repo-details__title-access">
@@ -195,5 +246,7 @@
         </section>
       </section>
     </main>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
