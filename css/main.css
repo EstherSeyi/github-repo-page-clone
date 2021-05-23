@@ -134,7 +134,7 @@ LAYOUT
 }
 /* Second Navigation and Repos */
 .repos__new-btn {
-  background-color: #2ea44e;
+  background-color: var(--color-green);
   color: var(--color-bg-primary);
 }
 

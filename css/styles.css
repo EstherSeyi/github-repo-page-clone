@@ -8,6 +8,7 @@
   --color-bg-accent: #fafbfc;
 
   --color-blue: #0366d6;
+  --color-green: #2ea44e;
   --color-border: #e1e4e8;
 
   --ff-primary: "Roboto", sans-serif;
@@ -59,6 +60,9 @@ img {
 .text-center {
   text-align: center;
 }
+.block {
+  display: block;
+}
 
 button {
   background: none;
@@ -69,6 +73,13 @@ ul {
   padding: 0;
 }
 
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
 .container {
   width: 95%;
   max-width: 1280px;

@@ -14,7 +14,9 @@ LAYOUT
   display: flex;
   justify-content: space-between;
 }
-.header-tab__nav {
+.header-tab__nav,
+.add-new-items,
+.account-settings {
   display: none;
 }
 .nav__item-link,
@@ -35,6 +37,15 @@ LAYOUT
   right: 16px;
   left: 1em;
 }
+.notification-icon {
+  align-self: center;
+}
+
+.account-settings__avatar,
+.add-new-items,
+.account-settings {
+  align-self: center;
+}
 
 @media (min-width: 768px) {
   .hideable-nav,
@@ -53,6 +64,30 @@ LAYOUT
   }
   .header-tab__logo-search-nav {
     flex: 40%;
+  }
+
+  .add-new-items__icons,
+  .account-settings__icons {
+    display: flex;
+  }
+
+  .add-new-items,
+  .add-new-items__dropdown-container {
+    position: relative;
+  }
+  .add-new-items__dropdown,
+  .add-new-items__dropdown-pointer {
+    position: absolute;
+  }
+  .add-new-items__dropdown {
+    right: 0px;
+  }
+
+  .add-new-items__dropdown-pointer {
+    top: -5px;
+    right: 11px;
+    transform: rotate(45deg);
+    background-color: white;
   }
 }
 
@@ -75,6 +110,11 @@ COLORS
 .header__search-input::placeholder {
   color: var(--color-bg-primary);
   opacity: 0.7;
+}
+
+.add-new-items__dropdown-list {
+  background-color: var(--color-bg-primary);
+  color: var(--color-secondary);
 }
 
 /**
@@ -102,8 +142,8 @@ SPACING
 }
 
 .notification-icon {
-  width: 1.75em;
-  height: 1.75em;
+  width: 1em;
+  height: 1em;
 }
 
 .sign-out {
@@ -127,6 +167,23 @@ SPACING
   margin-top: 5em;
 }
 
+.account-settings__avatar {
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.add-new-items__dropdown-item {
+  padding: 0.25em 0.5em 0.25em 1em;
+}
+.add-new-items__dropdown {
+  z-index: 4;
+}
+
+.add-new-items__dropdown-pointer {
+  padding: 0.5em;
+  width: 6px;
+}
+
 @media (min-width: 768px) {
   .nav,
   .header__search {
@@ -142,6 +199,10 @@ SPACING
     width: 50%;
     max-width: 400px;
   }
+  .notification-icon,
+  .add-new-items {
+    margin-right: 1em;
+  }
 }
 
 /**
@@ -151,6 +212,12 @@ TYPOGRAPHY
 */
 .header__search-input::placeholder {
   font-size: var(--fs-primary);
+}
+
+.add-new-items__dropdown-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 /**
 ==============
@@ -166,4 +233,19 @@ OTHERS
 
 .nav__item {
   border-top: 1px solid var(--color-accent);
+}
+
+.account-settings__avatar {
+  border-radius: 100%;
+}
+
+.account-settings,
+.add-new-items {
+  cursor: pointer;
+}
+
+.add-new-items__dropdown-list {
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0.5px ​1px rgb(149 157 165 / 20%);
 }
