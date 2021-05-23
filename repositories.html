@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/repos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HEADER SESSION -->
+    <header class="header">
+      <div class="header-tabs">
+        <button class="hamburger-button" id="toggle-nav-btn">
+          <img
+            class="hamburger header-icon"
+            src="./assets/hamburger.svg"
+            alt="hambuger menu icon"
+          />
+        </button>
+        <div class="header-tab__logo-search-nav">
+          <img
+            class="logo header-icon"
+            src="./assets/github-logo.svg"
+            alt="Github's Logo"
+          />
+          <form class="header__search close-nav" id="hideable-search">
+            <input
+              class="header__search-input"
+              placeholder="Search or jump to..."
+            />
+          </form>
+          <nav class="header-tab__nav">
+            <a>Pull requests</a>
+            <a>Issues</a>
+            <a>Marketplace</a>
+            <a>Explore</a>
+          </nav>
+        </div>
+        <img
+          class="notification-icon header-icon"
+          src="./assets/notification.svg"
+          alt="Notifications Icon"
+        />
+        <div class="add-new-items lg:block">
+          <button class="add-new-items__icons" id="new-button">
+            <img
+              class="add-items-icon header-icon"
+              src="./assets/plus.svg"
+              alt="New Icon"
+            />
+            <img
+              class="add-items-icon__caret header-icon"
+              src="./assets/downward-caret.svg"
+              alt="Dropdown Icon for New Items dropdown"
+            />
+          </button>
+
+          <div
+            class="add-new-items__dropdown close-nav"
+            id="new-items-dropdown"
+          >
+            <div class="add-new-items__dropdown-container">
+              <div class="add-new-items__dropdown-pointer"></div>
+              <ul class="add-new-items__dropdown-list">
+                <li class="add-new-items__dropdown-item">New Repository</li>
+                <li class="add-new-items__dropdown-item">Import repository</li>
+                <li class="add-new-items__dropdown-item">New gist</li>
+                <li class="add-new-items__dropdown-item">New organisation</li>
+                <li class="add-new-items__dropdown-item">New project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="account-settings lg:block">
+          <div class="account-settings__icons">
+            <img
+              class="account-settings__avatar"
+              src="./assets/IMG_2598.jpg"
+              alt="User Avatar"
+            />
+
+            <img
+              class="account-settings__caret header-icon"
+              src="./assets/downward-caret.svg"
+              alt="Dropdown Icon for account settings."
+            />
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav hideable-nav close-nav" id="hideable-nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__item-link">Dashboard</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Pull requests</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Issues</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Marketplace</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Explore</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Codespaces</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Sponsors</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">Settings</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">EstherSeyi</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link">
+              <img class="sign-out" src="assets/sign-out.svg" alt="sign out" />
+              Sign out</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- END OF HEADER SESSION-->
+
+    <nav class="second-nav hidden lg:block">
+      <div class="second-nav__inner container">
+        <div class="second-nav__empty"></div>
+
+        <ul class="second-nav__list">
+          <li class="second-nav__item">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/overview.svg"
+                alt="Overview"
+              />
+              <span>Overview</span>
+            </a>
+          </li>
+          <li class="second-nav__item nav-item__selected">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/repositories.svg"
+                alt="Repositories"
+              />
+              <span class="second-nav__link-text">Repositories</span>
+              <span class="second-nav__link__repos-no">29</span>
+            </a>
+          </li>
+          <li class="second-nav__item">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/projects.svg"
+                alt="Projects"
+              />
+              <span>Projects</span>
+            </a>
+          </li>
+
+          <li class="second-nav__item">
+            <a class="second-nav__link">
+              <img
+                class="second-nav__icon"
+                src="./assets/packages.svg"
+                alt="Packages"
+              />
+              <span>Packages</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-area container">
+      <!-- INFORMATION SESSION-->
+      <section class="information-section container">
+        <div class="information-section__names-photo">
+          <div class="information-section__photo">
+            <img
+              class="information-section__profile-photo"
+              src="./assets/IMG_2598.jpg"
+            />
+
+            <div class="information-section__emoji-container">🏠</div>
+          </div>
+          <div class="information-section__names">
+            <p class="names__fullname">Esther Oluwaseyi</p>
+            <p class="names__username">EstherSeyi</p>
+          </div>
+        </div>
+        <div class="information-section__bio">
+          <p>Working from home</p>
+        </div>
+        <p class="information-section__occupation">Software Developer</p>
+      </section>
+      <!-- END OF INFORMATION SESSION-->
+
+      <section class="second-nav-repos">
+        <nav class="second-nav lg:hidden">
+          <ul class="second-nav__list">
+            <li class="second-nav__item">
+              <a class="second-nav__link">
+                <img
+                  class="second-nav__icon"
+                  src="./assets/overview.svg"
+                  alt="Overview"
+                />
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="second-nav__item nav-item__selected">
+              <a class="second-nav__link">
+                <img
+                  class="second-nav__icon"
+                  src="./assets/repositories.svg"
+                  alt="Repositories"
+                />
+                <span class="second-nav__link-text">Repositories</span>
+                <span class="second-nav__link__repos-no">29</span>
+              </a>
+            </li>
+            <li class="second-nav__item">
+              <a class="second-nav__link">
+                <img
+                  class="second-nav__icon"
+                  src="./assets/projects.svg"
+                  alt="Projects"
+                />
+                <span>Projects</span>
+              </a>
+            </li>
+
+            <li class="second-nav__item">
+              <a class="second-nav__link">
+                <img
+                  class="second-nav__icon"
+                  src="./assets/packages.svg"
+                  alt="Packages"
+                />
+                <span>Packages</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="repos__search-new container">
+          <button class="repos__new-btn">
+            <img
+              class="second-nav__icon icon__new-btn"
+              src="./assets/new.svg"
+              alt="New Repository"
+            />
+            <span> New </span>
+          </button>
+          <input class="repos__new-input" placeholder="Find a repository" />
+        </div>
+
+        <!-- REPOSITORIES LIST SECTION-->
+        <section class="repos-list container">
+          <div class="repos-list__item">
+            <div class="repos-list__item__details">
+              <h3 class="repo-details__title-access">
+                <span class="repo-details__title"> instagram-clone-api </span>
+                <span class="repo-details__access">Private</span>
+              </h3>
+              <p class="repo-details__description">
+                API for instagram clone app
+              </p>
+              <div class="repo-details__language-timing">
+                <div class="repo-details__language">
+                  <span class="repo-details__language-circle"></span>
+                  <span class="repo-details__language-text">TypeScript</span>
+                </div>
+                <span class="repo-details__timing">Updated 2 days ago</span>
+              </div>
+            </div>
+
+            <div class="repos-list__star-btn">
+              <img
+                src="./assets/star.svg"
+                alt="Star Repo"
+                class="star-btn__icon"
+              />
+              <span class="star-btn__text">Star</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
