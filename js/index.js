@@ -1,36 +1,42 @@
+import { toggleDropdown } from "./toggle.js";
+import { disable, enable, loading, stopLoading } from "./buttonActions.js";
+import { getQuery } from "./query.js";
+
 const toggleNavButton = document.getElementById("toggle-nav-btn");
-const newButton = document.getElementById("new-button");
 const hideableNav = document.getElementById("hideable-nav");
 const hideableSearch = document.getElementById("hideable-search");
-const newItemDropdown = document.getElementById("new-items-dropdown");
+const searchBtn = document.getElementById("search-user-btn");
+const usernameInput = document.getElementById("username");
 
-const getUserData = (query) => {
-  const response = {};
-
-  fetch(`https://api.github.com/graphql?query=${query}`)
-    .then((response) => response.json())
-    .then((data) => {
-      response.uiDetails = data;
-    })
-    .catch((error) => {
-      response.error = error;
-    });
-
-  return response;
-};
-
-const toggleDropdown = (button, dropdown) => {
-  button.addEventListener("click", () => {
-    dropdown.classList.toggle("open-nav");
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!button.contains(e.target)) {
-      dropdown.classList.remove("open-nav");
-    }
-  });
-};
+const searchForm = document.getElementById("search-form");
 
 toggleDropdown(toggleNavButton, hideableNav);
 toggleDropdown(toggleNavButton, hideableSearch);
-toggleDropdown(newButton, newItemDropdown);
+
+const formState = {
+  username: "",
+  loading: false,
+  error: {},
+};
+
+disable(searchBtn);
+
+usernameInput.addEventListener("input", (event) => {
+  formState.username = event.target.value;
+  if (formState.username.length >= 3) {
+    enable(searchBtn);
+  } else {
+    disable(searchBtn);
+  }
+});
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(formState.username);
+  const query = getQuery(formState.username);
+  loading(searchBtn);
+
+  import("./fetchData.js").then((Module) => {
+    Module.getUserData(query, searchBtn, stopLoading);
+  });
+});
