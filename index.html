@@ -88,21 +88,28 @@
     <!-- END OF HEADER SESSION-->
 
     <div class="container">
-      <form class="search-user">
-        <label>
+      <form id="search-form" class="search-user">
+        <label htmlfor="username">
           <span class="search-user__label text-center block"
             >Search Github.</span
           >
           <input
+            name="username"
+            id="username"
             class="search-user__input"
             placeholder="Enter A Github Username..."
           />
         </label>
-        <button class="search-user__btn block">Go</button>
+        <button
+          type="submit"
+          id="search-user-btn"
+          class="search-user__btn block"
+        >
+          Go
+        </button>
       </form>
     </div>
 
-    <script src="./js/index.js"></script>
-    <script src="./js/fetchData.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
