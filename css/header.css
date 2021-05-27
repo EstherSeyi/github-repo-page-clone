@@ -89,6 +89,10 @@ LAYOUT
     transform: rotate(45deg);
     background-color: white;
   }
+
+  .header__search {
+    display: block;
+  }
 }
 
 /**
@@ -110,6 +114,9 @@ COLORS
 .header__search-input::placeholder {
   color: var(--color-bg-primary);
   opacity: 0.7;
+}
+.header-tab__nav-link {
+  color: var(--color-bg-primary);
 }
 
 .add-new-items__dropdown-list {

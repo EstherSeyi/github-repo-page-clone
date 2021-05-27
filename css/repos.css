@@ -22,6 +22,10 @@ LAYOUT
   display: inline-block;
 }
 
+.repo-features-count-icon {
+  display: flex;
+}
+
 /**
 ==============
 COLORS
@@ -42,6 +46,9 @@ COLORS
 }
 .repo-details__language-circle {
   background-color: #2b7489;
+}
+.repo-features-count-icon {
+  color: var(--color-primary);
 }
 
 /**
@@ -71,6 +78,16 @@ SPACING
 }
 .repo-details__language-timing {
   margin-top: 0.75em;
+}
+.repos-list__item__details {
+  width: 70%;
+}
+.repo-features-count-icon {
+  margin-right: 1em;
+}
+
+.repo-features__icon {
+  margin-right: 0.25em;
 }
 
 /**

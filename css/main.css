@@ -44,7 +44,7 @@ LAYOUT
 
 @media (min-width: 768px) {
   .information-section {
-    flex: 1 1 30%;
+    flex: 1 1 25%;
   }
 
   .information-section__names-photo {
@@ -59,7 +59,7 @@ LAYOUT
 
   .information-section__photo {
     position: relative;
-    bottom: 26px;
+    bottom: 53px;
   }
   .information-section__emoji-container {
     display: block;
@@ -107,14 +107,14 @@ LAYOUT
 @media (min-width: 768px) {
   .second-nav-repos,
   .second-nav__list {
-    flex: 2 2 65%;
+    flex: 2 2 75%;
   }
   .second-nav__inner {
     display: flex;
   }
 
   .second-nav__empty {
-    flex: 1 1 30%;
+    flex: 1 1 25%;
   }
   .repos__search-new {
     flex-direction: row;
@@ -190,7 +190,6 @@ SPACING
     width: 100%;
     max-width: 300px;
     max-height: 300px;
-    margin-bottom: 2em;
   }
 }
 
@@ -214,7 +213,7 @@ SPACING
   margin-bottom: 1em;
 }
 .repos__new-input {
-  padding: 0.5em 0.25em;
+  padding: 0.5em 1em;
 }
 .second-nav__link__repos-no {
   padding: 0 0.375em;
@@ -294,6 +293,9 @@ OTHERS
 .information-section__emoji-container {
   border: 1px solid var(--color-border);
   border-radius: 100%;
+}
+.information-section__profile-photo {
+  border: 1px solid var(--color-border);
 }
 
 /* Second Navigation and Repos */
