@@ -3,8 +3,6 @@ const getUserData = (query, searchBtn, stopLoading) => {
     error: null,
   };
 
-  localStorage.removeItem("githubUser");
-
   fetch(`https://api.github.com/graphql`, {
     method: "POST",
     headers: {
