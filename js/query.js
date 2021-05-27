@@ -16,6 +16,12 @@ export function getQuery(username) {
         name
         description
         updatedAt
+        stargazerCount
+				forkCount
+        licenseInfo {
+					name
+					spdxId
+				}
         primaryLanguage {
           name
           color
