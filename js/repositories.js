@@ -1,4 +1,9 @@
 import { toggleDropdown } from "./toggle.js";
+import {
+  furnishInformationSection,
+  furnishRepositories,
+  furnishOthers,
+} from "./renderInterfaces.js";
 
 const newButton = document.getElementById("new-button");
 const toggleNavButton = document.getElementById("toggle-nav-btn");
@@ -10,6 +15,19 @@ toggleDropdown(toggleNavButton, hideableNav);
 toggleDropdown(toggleNavButton, hideableSearch);
 toggleDropdown(newButton, newItemDropdown);
 
-const user = localStorage.getItem("githubUser");
+const store = localStorage.getItem("githubUser");
 
-console.log(JSON.parse(user));
+if (JSON.parse(store)?.data?.user) {
+  const {
+    data: {
+      user: { avatarUrl, name, bio, login, status, repositories },
+    },
+  } = JSON.parse(store);
+
+  furnishInformationSection({ avatarUrl, name, bio, login, status });
+
+  furnishRepositories(repositories);
+  furnishOthers({ avatarUrl, login, totalRepos: repositories.totalCount });
+} else {
+  location.replace("/index.html");
+}
