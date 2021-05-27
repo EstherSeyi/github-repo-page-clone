@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Gihub repository page clone." />
-    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/repos.css" />
-    
+
     <title>Document</title>
   </head>
   <body>
@@ -34,10 +37,10 @@
             />
           </form>
           <nav class="header-tab__nav">
-            <a href="#">Pull requests</a>
-            <a href="#"Issues</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Explore</a>
+            <a class="header-tab__nav-link" href="#">Pull requests</a>
+            <a class="header-tab__nav-link" href="#">Issues</a>
+            <a class="header-tab__nav-link" href="#">Marketplace</a>
+            <a class="header-tab__nav-link" href="#">Explore</a>
           </nav>
         </div>
         <img
@@ -75,12 +78,13 @@
             </div>
           </div>
         </div>
-        <div class="account-settings lg:block">
+        <div class="account-settings lg:block" id="account-settings">
           <div class="account-settings__icons">
             <img
               class="account-settings__avatar"
-              src="./assets/IMG_2598.jpg"
-              alt="User Avatar"
+              src=""
+              alt=""
+              id="user-avatar"
             />
 
             <img
@@ -155,7 +159,9 @@
                 alt="Repositories"
               />
               <span class="second-nav__link-text">Repositories</span>
-              <span class="second-nav__link__repos-no">29</span>
+              <span class="second-nav__link__repos-no total" id="total-repo2"
+                >29</span
+              >
             </a>
           </li>
           <li class="second-nav__item">
@@ -184,28 +190,11 @@
     </nav>
 
     <main class="main-area container">
-      <!-- INFORMATION SESSION-->
-      <section class="information-section container">
-        <div class="information-section__names-photo">
-          <div class="information-section__photo">
-            <img
-              class="information-section__profile-photo"
-              src="./assets/IMG_2598.jpg"
-              alt="User's Avatar"
-            />
-
-            <div class="information-section__emoji-container">🏠</div>
-          </div>
-          <div class="information-section__names">
-            <p class="names__fullname">Esther Oluwaseyi</p>
-            <p class="names__username">EstherSeyi</p>
-          </div>
-        </div>
-        <div class="information-section__bio">
-          <p>Working from home</p>
-        </div>
-        <p class="information-section__occupation">Software Developer</p>
-      </section>
+      <!-- INFORMATION SECTION-->
+      <section
+        class="information-section container"
+        id="info-section"
+      ></section>
       <!-- END OF INFORMATION SESSION-->
 
       <section class="second-nav-repos">
@@ -229,7 +218,7 @@
                   alt="Repositories"
                 />
                 <span class="second-nav__link-text">Repositories</span>
-                <span class="second-nav__link__repos-no">29</span>
+                <span class="second-nav__link__repos-no" id="total-repo"></span>
               </a>
             </li>
             <li class="second-nav__item">
@@ -268,35 +257,7 @@
         </div>
 
         <!-- REPOSITORIES LIST SECTION-->
-        <section class="repos-list container">
-          <div class="repos-list__item">
-            <div class="repos-list__item__details">
-              <h3 class="repo-details__title-access">
-                <span class="repo-details__title"> instagram-clone-api </span>
-                <span class="repo-details__access">Private</span>
-              </h3>
-              <p class="repo-details__description">
-                API for instagram clone app
-              </p>
-              <div class="repo-details__language-timing">
-                <div class="repo-details__language">
-                  <span class="repo-details__language-circle"></span>
-                  <span class="repo-details__language-text">TypeScript</span>
-                </div>
-                <span class="repo-details__timing">Updated 2 days ago</span>
-              </div>
-            </div>
-
-            <div class="repos-list__star-btn">
-              <img
-                src="./assets/star.svg"
-                alt="Star Repo"
-                class="star-btn__icon"
-              />
-              <span class="star-btn__text">Star</span>
-            </div>
-          </div>
-        </section>
+        <section class="repos-list container" id="repo-section"></section>
       </section>
     </main>
 
