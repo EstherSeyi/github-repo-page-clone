@@ -28,6 +28,12 @@ if (JSON.parse(store)?.data?.user) {
 
   furnishRepositories(repositories);
   furnishOthers({ avatarUrl, login, totalRepos: repositories.totalCount });
+
+  // if (window.innerWidth > 767) {
+  import("./intersectionObserver.js").then((Module) => {
+    Module.addSmallerProfile();
+  });
+  // }
 } else {
   location.replace("/index.html");
 }
