@@ -4,6 +4,7 @@ import {
   furnishRepositories,
   furnishOthers,
 } from "./renderInterfaces.js";
+import { addSmallerProfile } from "./intersectionObserver.js";
 
 const newButton = document.getElementById("new-button");
 const toggleNavButton = document.getElementById("toggle-nav-btn");
@@ -29,11 +30,7 @@ if (JSON.parse(store)?.data?.user) {
   furnishRepositories(repositories);
   furnishOthers({ avatarUrl, login, totalRepos: repositories.totalCount });
 
-  // if (window.innerWidth > 767) {
-  import("./intersectionObserver.js").then((Module) => {
-    Module.addSmallerProfile();
-  });
-  // }
+  addSmallerProfile();
 } else {
   location.replace("/index.html");
 }

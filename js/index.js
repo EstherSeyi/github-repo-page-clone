@@ -39,4 +39,10 @@ searchForm.addEventListener("submit", (event) => {
   import("./fetchData.js").then((Module) => {
     Module.getUserData(query, searchBtn, stopLoading);
   });
+
+  // if (JSON.parse(localStorage.getItem("githubError"))) {
+  //   const githubError = document.getElementById("githubError");
+
+  //   githubError.innerText = JSON.parse(localStorage.getItem("githubError"));
+  // }
 });
