@@ -32,7 +32,7 @@ usernameInput.addEventListener("input", (event) => {
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(formState.username);
+
   const query = getQuery(formState.username);
   loading(searchBtn);
 
