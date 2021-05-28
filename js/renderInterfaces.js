@@ -3,7 +3,7 @@ function furnishInformationSection(infoSectionData) {
   const infoSectionContainer = document.createElement("template");
 
   const infoMarkup = `<div class="information-section__names-photo">
-<div class="information-section__photo">
+<div id="avatar-container" class="information-section__photo">
   <img
     class="information-section__profile-photo"
     src=${infoSectionData?.avatarUrl}
@@ -19,7 +19,10 @@ function furnishInformationSection(infoSectionData) {
   <p class="names__username">${infoSectionData?.login}</p>
 </div>
 </div>
-<div class="information-section__bio">
+<div class="information-section__bio ${
+    infoSectionData?.status?.message ? "information-section__bio-border" : ""
+  }">
+<span>${infoSectionData?.status?.emojiHTML ?? ""}</span>
 <p>${infoSectionData?.status?.message ?? ""}</p>
 </div>
 <p class="information-section__occupation">${infoSectionData?.bio ?? ""}</p>`;
@@ -30,9 +33,6 @@ function furnishInformationSection(infoSectionData) {
 
 function furnishRepositories(repositories) {
   const repoSection = document.getElementById("repo-section");
-
-  console.log(repositories);
-
   repositories.nodes.forEach((repository) => {
     const repo = document.createElement("template");
     const repoItemMarkup = ` <div class="repos-list__item">
@@ -109,11 +109,16 @@ function furnishOthers({ avatarUrl, login, totalRepos }) {
   const useAvatar = document.getElementById("user-avatar");
   const totalReposMarkup = document.getElementById("total-repo");
   const totalReposMarkup2 = document.getElementById("total-repo2");
+  const miniProfileAvatar = document.getElementById("mini-profile__avatar");
+  const miniProfileUsername = document.getElementById("mini-profile__username");
 
   totalReposMarkup.textContent = totalRepos;
   totalReposMarkup2.textContent = totalRepos;
   useAvatar.src = avatarUrl;
   useAvatar.alt = `${login ?? "User"}'s Avatar`;
+  miniProfileAvatar.src = avatarUrl;
+  miniProfileAvatar.alt = `${login ?? "User"}'s Avatar`;
+  miniProfileUsername.textContent = login;
 }
 
 export { furnishInformationSection, furnishRepositories, furnishOthers };
