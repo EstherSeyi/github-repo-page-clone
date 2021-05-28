@@ -42,6 +42,11 @@ LAYOUT
   display: none;
 }
 
+.information-section__bio {
+  display: flex;
+  align-items: flex-end;
+}
+
 @media (min-width: 768px) {
   .information-section {
     flex: 1 1 25%;
@@ -65,7 +70,7 @@ LAYOUT
     display: block;
     position: absolute;
     bottom: 48px;
-    right: 4px;
+    right: 1%;
   }
 }
 
@@ -282,19 +287,17 @@ OTHERS
 .information-section__profile-photo {
   border-radius: 100%;
 }
-.information-section__bio {
-  border-radius: 5px;
-  border: 1px solid var(--color-border);
-}
 
-.information-section__bio > p::before {
-  content: "🏠 ";
-}
 .information-section__emoji-container {
   border: 1px solid var(--color-border);
   border-radius: 100%;
 }
 .information-section__profile-photo {
+  border: 1px solid var(--color-border);
+}
+
+.information-section__bio-border {
+  border-radius: 5px;
   border: 1px solid var(--color-border);
 }
 

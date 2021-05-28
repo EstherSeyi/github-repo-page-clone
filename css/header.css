@@ -46,6 +46,9 @@ LAYOUT
 .account-settings {
   align-self: center;
 }
+.mini-profile {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .hideable-nav,
@@ -67,7 +70,8 @@ LAYOUT
   }
 
   .add-new-items__icons,
-  .account-settings__icons {
+  .account-settings__icons,
+  .mini-profile__username-follow {
     display: flex;
   }
 
@@ -93,6 +97,17 @@ LAYOUT
   .header__search {
     display: block;
   }
+  .mini-profile {
+    display: flex;
+    align-items: center;
+  }
+  .mini-profile__username-follow {
+    flex-direction: column;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 /**
@@ -207,8 +222,16 @@ SPACING
     max-width: 400px;
   }
   .notification-icon,
-  .add-new-items {
+  .add-new-items,
+  .mini-profile__avatar {
     margin-right: 1em;
+  }
+  .mini-profile__avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .mini-profile__follow {
+    padding: 0.15em 0.5em;
   }
 }
 
@@ -226,6 +249,9 @@ TYPOGRAPHY
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.mini-profile__username {
+  font-weight: 500;
+}
 /**
 ==============
 OTHERS
@@ -242,7 +268,8 @@ OTHERS
   border-top: 1px solid var(--color-accent);
 }
 
-.account-settings__avatar {
+.account-settings__avatar,
+.mini-profile__avatar {
   border-radius: 100%;
 }
 
@@ -255,4 +282,9 @@ OTHERS
   border-radius: 6px;
   border: 1px solid var(--color-border);
   box-shadow: 0.5px ​1px rgb(149 157 165 / 20%);
+}
+
+.mini-profile__follow {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
 }
