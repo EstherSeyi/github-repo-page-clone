@@ -1,8 +1,4 @@
 const getUserData = (query, searchBtn, stopLoading) => {
-  const response = {
-    error: null,
-  };
-
   fetch(`https://api.github.com/graphql`, {
     method: "POST",
     headers: {
@@ -15,18 +11,22 @@ const getUserData = (query, searchBtn, stopLoading) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      localStorage.setItem("githubUser", JSON.stringify(data));
-    })
-    .then(() => {
       stopLoading(searchBtn, "Go");
+      if (data.errors) {
+        localStorage.setItem(
+          "githubError",
+          JSON.stringify(data.errors[0].message)
+        );
+        return;
+      }
+      localStorage.setItem("githubUser", JSON.stringify(data));
+
       window.location.href = "./repositories.html";
     })
     .catch((error) => {
       stopLoading(searchBtn, "Go");
-      response.error = error;
+      console.error(error);
     });
-
-  return response;
 };
 
 export { getUserData };
