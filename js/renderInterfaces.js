@@ -15,7 +15,7 @@ function furnishInformationSection(infoSectionData) {
   }</div>
 </div>
 <div class="information-section__names">
-  <p class="names__fullname">${infoSectionData?.name}</p>
+  <p class="names__fullname">${infoSectionData?.name ?? ""}</p>
   <p class="names__username">${infoSectionData?.login}</p>
 </div>
 </div>
