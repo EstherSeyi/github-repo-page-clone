@@ -7,6 +7,7 @@ const hideableNav = document.getElementById("hideable-nav");
 const hideableSearch = document.getElementById("hideable-search");
 const searchBtn = document.getElementById("search-user-btn");
 const usernameInput = document.getElementById("username");
+const githubError = document.getElementById("githubError");
 
 const searchForm = document.getElementById("search-form");
 
@@ -20,6 +21,9 @@ const formState = {
 disable(searchBtn);
 
 usernameInput.addEventListener("input", (event) => {
+  if (githubError.innerText !== "") {
+    githubError.innerText = "";
+  }
   formState.username = event.target.value;
   if (formState.username.length >= 3) {
     enable(searchBtn);
