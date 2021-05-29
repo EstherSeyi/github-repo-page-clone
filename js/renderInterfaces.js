@@ -111,6 +111,7 @@ function furnishOthers({ avatarUrl, login, totalRepos }) {
   const totalReposMarkup2 = document.getElementById("total-repo2");
   const miniProfileAvatar = document.getElementById("mini-profile__avatar");
   const miniProfileUsername = document.getElementById("mini-profile__username");
+  const repoPageTitle = document.getElementById("repo-page-title");
 
   totalReposMarkup.textContent = totalRepos;
   totalReposMarkup2.textContent = totalRepos;
@@ -119,6 +120,7 @@ function furnishOthers({ avatarUrl, login, totalRepos }) {
   miniProfileAvatar.src = avatarUrl;
   miniProfileAvatar.alt = `${login ?? "User"}'s Avatar`;
   miniProfileUsername.textContent = login;
+  repoPageTitle.textContent = `${login ?? "User"}'s Repositories`;
 }
 
 export { furnishInformationSection, furnishRepositories, furnishOthers };
