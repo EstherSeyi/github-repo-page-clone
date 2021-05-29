@@ -27,7 +27,10 @@ if (JSON.parse(store)?.data?.user) {
 
   furnishInformationSection({ avatarUrl, name, bio, login, status });
 
-  furnishRepositories(repositories);
+  import("./date.js").then(({ calculateRelativeDate }) => {
+    furnishRepositories(repositories, calculateRelativeDate);
+  });
+
   furnishOthers({ avatarUrl, login, totalRepos: repositories.totalCount });
 
   addSmallerProfile();

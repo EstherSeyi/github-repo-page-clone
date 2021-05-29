@@ -31,7 +31,7 @@ function furnishInformationSection(infoSectionData) {
   infoSection.appendChild(infoSectionContainer.content);
 }
 
-function furnishRepositories(repositories) {
+function furnishRepositories(repositories, calculateRelativeDate) {
   const repoSection = document.getElementById("repo-section");
   repositories.nodes.forEach((repository) => {
     const repo = document.createElement("template");
@@ -86,7 +86,9 @@ ${
     </div>`
     : ""
 }
-        <span class="repo-details__timing">Updated 2 days ago</span>
+        <span class="repo-details__timing">${calculateRelativeDate(
+          repository?.updatedAt
+        )}</span>
       </div>
     </div>
   
