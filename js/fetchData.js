@@ -4,7 +4,8 @@ const getUserData = (query, searchBtn, stopLoading) => {
   fetch(`https://api.github.com/graphql`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer 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`,
+      // Add Github token here...
+      Authorization: `Bearer `,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
