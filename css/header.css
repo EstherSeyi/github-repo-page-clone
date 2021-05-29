@@ -103,6 +103,7 @@ LAYOUT
   }
   .mini-profile__username-follow {
     flex-direction: column;
+    align-self: flex-end;
   }
 }
 
@@ -233,6 +234,9 @@ SPACING
   .mini-profile__follow {
     padding: 0.15em 0.5em;
   }
+  .mini-profile {
+    margin-top: 0.75em;
+  }
 }
 
 /**
@@ -287,4 +291,7 @@ OTHERS
 .mini-profile__follow {
   border: 1px solid var(--color-border);
   border-radius: 6px;
+}
+.add-new-items__icons {
+  cursor: pointer;
 }
