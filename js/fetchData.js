@@ -1,3 +1,5 @@
+const githubError = document.getElementById("githubError");
+
 const getUserData = (query, searchBtn, stopLoading) => {
   fetch(`https://api.github.com/graphql`, {
     method: "POST",
@@ -13,10 +15,7 @@ const getUserData = (query, searchBtn, stopLoading) => {
     .then((data) => {
       stopLoading(searchBtn, "Go");
       if (data.errors) {
-        localStorage.setItem(
-          "githubError",
-          JSON.stringify(data.errors[0].message)
-        );
+        githubError.innerText = data.errors[0].message;
         return;
       }
       localStorage.setItem("githubUser", JSON.stringify(data));
