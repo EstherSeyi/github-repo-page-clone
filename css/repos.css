@@ -108,6 +108,15 @@ TYPOGRAPHY
 .star-btn__text {
   font-size: 0.875rem;
 }
+.repo-details__description {
+  font-size: 0.875rem;
+}
+.repo-details__language-timing {
+  font-size: 0.75rem;
+}
+.repo-details__title-access {
+  font-size: 1.5rem;
+}
 
 /**
 ==============

@@ -42,14 +42,13 @@ h1,
 h2,
 h3 {
   color: var(--color-secondary);
-  /* font-family: var(--ff-accent); */
   font-weight: 900;
   line-height: 1;
 }
 
 h2,
 h3 {
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
 
 img {

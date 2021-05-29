@@ -245,7 +245,7 @@ TYPOGRAPHY
 ==============
 */
 .header__search-input::placeholder {
-  font-size: var(--fs-primary);
+  font-size: 0.875rem;
 }
 
 .add-new-items__dropdown-item {
